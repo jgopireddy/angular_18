@@ -1,45 +1,36 @@
-<p>roles works!</p>
-<!-- 
 <div class="row">
-    <div class="col-3">
-        <p> {{firstName}} </p>
-    </div>
-    <div class="col-3">
-        <p> {{version}} </p>
-    </div>
-    <div class="col-3">
-        <p> {{currentDate}} </p>
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr. No</th>
+                    <th>Role Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let role of roleList; let srno = index">
+                    <td>{{srno+1}}</td>
+                    <td>{{role.role}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-3">
-        <input type="text" [value]="firstName" class="form-control"/>
+<!-- <div class="row">
+    <div class="col-4">
+        <ul>
+            <li *ngFor="let item of roleList"
+            >{{item.role}}
+            </li>
+        </ul>
     </div>
-    <div class="col-3">
-        <input type="text" [(ngModel)]="firstName" class="form-control"/>
-    </div>
-    <div class="col-3">
-        <input [type]="inputType" />
-    </div>
-    <div class="col-3">
-        <select [(ngModel)]="selectedState">
-            <option value="GA">GA</option>
-            <option value="AL">AL</option>
-            <option value="FL">FL</option>
+
+    <div class="col-4">
+        <select>
+            <option *ngFor="let role of roleList"
+            [value]="role.roleId"
+            > {{role.role}}</option>
         </select>
     </div>
-    <div class="col-3">
-        <button class="btn btn-success"
-        (click)="showWelcomeAlert()"
-        >Show Alert</button>
-    </div>
-    <div class="col-3">
-        <button
-        class="btn btn-success"
-        (click)="showMessage('React Message')"
-        >Show React</button>
-    </div>
 </div> -->
-
-
